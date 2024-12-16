@@ -1,0 +1,18 @@
+pipeline{
+
+    agent any
+
+    stages{
+
+        stage("complete"){
+
+            Bat 'javac Test.java'
+        }
+
+        stage("run"){
+
+            Bat "java Test"
+        }
+    }
+
+}
