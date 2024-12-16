@@ -6,12 +6,16 @@ pipeline{
 
         stage("complete"){
 
-            Bat 'javac Test.java'
+            steps{
+                Bat 'javac Test.java'
+            }
         }
 
         stage("run"){
 
-            Bat "java Test"
+            steps{
+                Bat "java Test"
+            }
         }
     }
 
